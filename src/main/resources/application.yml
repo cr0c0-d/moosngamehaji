@@ -1,0 +1,26 @@
+#logging:
+#  level:
+#    root: DEBUG
+#    jasypt: DEBUG
+spring:
+  sql:
+    init:
+      encoding: utf-8
+
+  jpa:
+    # 전송 쿼리 확인
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Seoul
+        format_sql: true
+
+  datasource:
+    url: ENC(i6CQod44d5tc/AufDk0vuXJhKLGTcx7WlkMytiF2sn6stsAlSr+6ooX0cEgfGqanaKn2bV4qBOVU+GUMBgbfzaauLdyK2K8SvueOu0OdIiLBeB07HVHy5oy/AVvd793tDFIpJNdBERsOsDIwGD8NOtFRPlhOOzBYVGPWujdHxEKR0eJNQEMGHEKq1hbuvZCHIrQNo8t3bLE=)
+    username: ENC(7g866Jae7xBS9klqKpEwziH/nUOwBMrV)
+    password: ENC(gI55a4PUEPfvcX5oiPecZTQcJzQz8rjWhr1ZrLagtUU=)
+    sql-script-encoding: utf-8
+
+steam:
+  apiKey: ENC(vi2HRpfr5gm5A62TEvsqcmyeM5ESizfdfRMJOCklyx6xCEGBjIiKYGI/J0lkQT23x5TQJBIIWuw=)
