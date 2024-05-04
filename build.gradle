@@ -16,14 +16,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    // jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
+    // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.projectlombok:lombok'
-
-
 
     // JWT
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
@@ -37,8 +37,12 @@ dependencies {
 
     // jasypt - 데이터 암호화 라이브러리
     implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'
+
+    // h2
+    runtimeOnly 'com.h2database:h2' // 인메모리 데이터베이스
 }
 
 test {
     useJUnitPlatform()
+    systemProperty "jasypt.encryptor.password", System.getProperties().get("jasypt.encryptor.password")
 }
